@@ -14,10 +14,16 @@ jobs:
         runs-on: "ubuntu-latest"
     
     steps:
-        - name: 'Checkout'
+        - name: Checkout
           uses: actions/checkout@v2
           
-        - name: 'Install dependencies'
+        - name: Install 
           run: npm install
+          
+        - name: Build
+          run: npm build
+          
+        - name: deploy
+          uses: demurgos/ga-deploy-git@v1
           
           
