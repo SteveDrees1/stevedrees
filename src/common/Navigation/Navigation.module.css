@@ -1,0 +1,108 @@
+/* Navigation CSS Template */
+#BottomNav{
+    flex-basis: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15px 15px 15px 15px;
+}
+
+#myNameTextLogo{
+    margin: 0 0 5px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.link{
+    margin-right: 8px !important;
+    text-decoration: none;
+}
+
+#myNameTextLogo:hover{
+    -webkit-animation: font-color-change 8s linear infinite alternate both;
+    animation: font-color-change 8s linear infinite alternate both;
+}
+
+@-webkit-keyframes font-color-change {
+    12.5% {
+        color: #5f86f2;
+    }
+    25% {
+        color: #a65ff2;
+    }
+    37.5% {
+        color: #f25fd0;
+    }
+    50% {
+        color: #f25f61;
+    }
+    62.5% {
+        color: #f2cb5f;
+    }
+    75% {
+        color: #abf25f;
+    }
+    87.5% {
+        color: #5ff281;
+    }
+    100% {
+        color: #5ff2f0;
+    }
+}
+
+@keyframes font-color-change {
+    12.5% {
+        color: #5f86f2;
+    }
+    25% {
+        color: #a65ff2;
+    }
+    37.5% {
+        color: #f25fd0;
+    }
+    50% {
+        color: #f25f61;
+    }
+    62.5% {
+        color: #f2cb5f;
+    }
+    75% {
+        color: #abf25f;
+    }
+    87.5% {
+        color: #5ff281;
+    }
+    100% {
+        color: #5ff2f0;
+    }
+}
+
+@keyframes font-color-change {
+    12.5% {
+        color: #5f86f2;
+    }
+    25% {
+        color: #a65ff2;
+    }
+    37.5% {
+        color: #f25fd0;
+    }
+    50% {
+        color: #f25f61;
+    }
+    62.5% {
+        color: #f2cb5f;
+    }
+    75% {
+        color: #abf25f;
+    }
+    87.5% {
+        color: #5ff281;
+    }
+    100% {
+        color: #5ff2f0;
+    }
+}

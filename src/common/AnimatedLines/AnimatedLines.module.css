@@ -1,0 +1,85 @@
+/* AnimatedLines CSS Template */
+.horizontalLineTop {
+    position: absolute;
+    border-bottom: 4px solid #D4D4D4;
+    animation: horizontalLineTopA 2s linear forwards;
+    top: 0;
+    left: calc(50% - 4px)
+}
+
+@keyframes horizontalLineTopA {
+    from {
+        left: calc(50% - 4px);
+        width:0;
+    }
+    to {
+        left:0;
+        width:100%;
+    }
+}
+
+/* AnimatedLines CSS Template */
+.horizontalLineBottom {
+    position: absolute;
+    border-bottom: 4px solid #D4D4D4;
+    animation: horizontalLineBottomA 2s linear forwards;
+    bottom: 0;
+    left: calc(50% - 4px)
+}
+
+@keyframes horizontalLineBottomA {
+    from {
+        left: calc(50% - 4px);
+        width:0;
+    }
+    to {
+        left:0;
+        width:100%;
+    }
+}
+
+.verticalLineLeft {
+    position: absolute;
+    border-right: 4px solid #D4D4D4;
+    text-align: center;
+    animation: verticalLineLeftA 2s linear forwards;
+    left: calc(100% - 4px);
+    z-index: 15;
+}
+
+@keyframes verticalLineLeftA {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+
+.verticalLineRight {
+    position: absolute;
+    border-right: 4px solid #D4D4D4;
+    text-align: center;
+    animation: verticalLineRightA 2s linear forwards;
+    right: calc(100% - 4px);
+    z-index: 15;
+}
+
+@keyframes verticalLineRightA {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 736px){
+    .verticalLineLeft{
+        display: none;
+    }
+    .verticalLineRight{
+        display: none;
+    }
+}

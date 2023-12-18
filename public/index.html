@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Steve Drees profile"
+      content="Steve Drees, Senior Full
+      Stack Developer. 8+ Years of experience. JavaScript, React Native, React, Node.JS, ExpressJS, MongoDB, Photoshop, AdobeXD, Adobe Illustrator"
     />
+    <link rel="stylesheet" href="%PUBLIC_URL%/magic.css" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,7 +26,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Steve Drees</title>
+    <title>Steve Drees - Senior Developer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +41,25 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script type="application/javascript">
+    window.preloadedImages = [];
+    let imgSRCArr = [
+      "https://media.giphy.com/media/2tTiCSfEEP5QS5TjGr/source.gif",
+      "https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/source.gif",
+      "https://media.giphy.com/media/ko7twHhomhk8E/source.gif",
+      "/img/AetherLogoAndTextLogo.png",
+      "/img/Buildings.png",
+      "/img/DevMindLogo.png",
+      "/img/DevMindTextLogo.png",
+      "/img/FundersTextLogo.png"
+    ]
+
+    imgSRCArr.map((imgURL) => {
+      const img = new Image();
+      img.src = imgURL;
+      return img
+    });
+    window.preloadedImages = imgSRCArr;
+  </script>
   </body>
 </html>

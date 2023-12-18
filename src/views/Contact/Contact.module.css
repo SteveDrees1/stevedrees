@@ -1,0 +1,42 @@
+/* Contact CSS Template */
+
+#contactWrapper{
+    flex-basis: 60%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactFormTitle{
+    min-width: 38%;
+    min-height: 50px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    font-size: 3vw;
+    letter-spacing: 1px;
+    padding: 8px 20px 8px 20px;
+    margin: 30px 0 40px 0;
+}
+
+#contactForm{
+    width: 60%;
+    height: 65%;
+    position: relative;
+}
+
+.inputSpacer{
+    margin: 15px 0 !important;
+    background: white;
+}
+
+#sendButton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

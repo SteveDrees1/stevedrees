@@ -1,0 +1,116 @@
+/* MyWork CSS Template */
+
+#templateWrapper{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.innerBox{
+    display: flex;
+    flex-direction: column;
+}
+
+#right{
+    flex-basis: 35%;
+    position: relative;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*overflow: hidden;*/
+}
+
+#rightWorkCont{
+    flex-basis: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    cursor: pointer;
+    /*-webkit-box-shadow: 0px 0px 42px -9px rgba(74,74,74,1);*/
+    /*-moz-box-shadow: 0px 0px 42px -9px rgba(74,74,74,1);*/
+    /*box-shadow: 0px 0px 42px -9px rgba(74,74,74,1);*/
+}
+
+#middle{
+    flex-basis: 36%;
+    position: relative;
+}
+
+.middleInnerBox{
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#left{
+    flex-basis: 29%;
+    position: relative;
+}
+
+.workTemp{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fundersTextWrapper{
+    width: 55%;
+    z-index: 30;
+}
+
+#devMindWrapper{
+    width: 75%;
+    z-index: 30;
+}
+
+#Studio953Wrapper{
+    width: 80%;
+    z-index: 30;
+}
+
+.horizontalMobile{
+    display: none;
+}
+
+@media screen and (max-width: 736px){
+    #templateWrapper{
+        flex-direction: column-reverse;
+        overflow: auto;
+    }
+
+    #fundersTextWrapper{
+        width: 50%;
+        height: 245px;
+    }
+
+    #devMindWrapper{
+        height: 225px;
+        margin-top: 15px;
+    }
+
+    .middleInnerBox{
+        min-height: 300px;
+    }
+
+    .horizontalMobile{
+        display: initial;
+    }
+
+    .innerBox{
+        flex-direction: column;
+    }
+}
