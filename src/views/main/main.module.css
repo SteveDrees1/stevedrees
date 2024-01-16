@@ -1,4 +1,4 @@
-/*Main Compoent CSS Template*/
+/*Main Component CSS Template*/
 #marco {
     position: relative;
     display: flex;
@@ -15,25 +15,21 @@
     z-index: -5;
     width: calc(100vw);
     height: calc(100vh);
-    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
     background-size: 300% 300%;
-    background-position: 0 50%;
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0) 0 50%;
     animation: moveGradient 7.5s alternate infinite;
 }
 
 .codeDream{
     background-image: url(https://media.giphy.com/media/2tTiCSfEEP5QS5TjGr/source.gif);
     background-repeat: repeat-x;
-    -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #4c4e5c;
     color: rgba(255,255,255,0.18);
-    -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
     font-size: 8vw;
     font-weight: 700;
     font-family: 'Anton', sans-serif;
-    /*font-family: 'Raleway', sans-serif;*/
     letter-spacing: 5px;
 }
 
