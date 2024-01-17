@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
 import {
-    Box, Link
+    Box
 } from '@material-ui/core';
 import Styles from './MyWork.module.css';
 import {VerticalLineLeft, HorizontalLineTop} from "../../common/AnimatedLines/AnimatedLines.component";

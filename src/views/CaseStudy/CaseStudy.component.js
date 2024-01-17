@@ -98,11 +98,3 @@ class CaseStudy extends Component {
 }
 
 export default CaseStudy;
-
-function FadeIn(props) {
-    return (
-        <>
-            {props.children}
-        </>
-    )
-}

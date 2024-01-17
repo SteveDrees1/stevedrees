@@ -1,8 +1,5 @@
 import React from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
-import {
-    Box
-} from '@material-ui/core';
 import Styles from './AnimatedLines.module.css';
 
 // class AnimatedLines extends Component {
