@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
-import { 
-    Box 
-} from '@material-ui/core';
+import {Box} from '@material-ui/core';
 import Styles from './CaseStudy.module.css';
-import {VerticalLineLeft, HorizontalLineTop} from "../../common/AnimatedLines/AnimatedLines.component";
+import {HorizontalLineTop, VerticalLineLeft} from "../../common/AnimatedLines/AnimatedLines.component";
 import Projects from '../../projects'
 import Tilty from "react-tilty";
 import Navigation from "../../common/Navigation/Navigation.component";
@@ -21,15 +19,15 @@ class CaseStudy extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         let projectToDisplay = Projects.filter(item => item.id === this.props.match.params.caseID)[0];
-        if(projectToDisplay === undefined || null){
+        if (projectToDisplay === undefined || null) {
             this.props.history.replace("/my-work");
-        }else{
+        } else {
             this.setState(projectToDisplay);
         }
     }
-    
+
     render() {
         return (
             <>
@@ -39,22 +37,22 @@ class CaseStudy extends Component {
                         <Box id={Styles.leftInnerTopBox}>
                             <Box id={Styles.leftInnerTopBoxInnerWrap} className={`fadeIn`}>
                                 <VerticalLineLeft/>
-                                    <h3 className={Styles.minorTitle}>
-                                        Tech Used
-                                    </h3>
-                                    <ul className={Styles.boxArticleUL}>
-                                        {
-                                            this.state.techUse.map((label)=>{
-                                                return(
-                                                    <li
-                                                        key={label}
-                                                        className={Styles.boxArticleULLI}>
-                                                        {label}
-                                                    </li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
+                                <h3 className={Styles.minorTitle}>
+                                    Tech Used
+                                </h3>
+                                <ul className={Styles.boxArticleUL}>
+                                    {
+                                        this.state.techUse.map((label) => {
+                                            return (
+                                                <li
+                                                    key={label}
+                                                    className={Styles.boxArticleULLI}>
+                                                    {label}
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
                             </Box>
                             <Box id={Styles.leftInnerTopBoxInnerWrap} className={`fadeIn`}>
                                 <h3 className={Styles.minorTitle}>
@@ -62,8 +60,8 @@ class CaseStudy extends Component {
                                 </h3>
                                 <ul className={Styles.boxArticleUL}>
                                     {
-                                        this.state.deliverables.map((label)=>{
-                                            return(
+                                        this.state.deliverables.map((label) => {
+                                            return (
                                                 <li key={label}>{label}</li>
                                             )
                                         })
@@ -73,7 +71,7 @@ class CaseStudy extends Component {
                         </Box>
                         <Box id={Styles.leftInnerBottomBox}>
                             <HorizontalLineTop/>
-                            <Tilty className={`fadeIn`} style={{width: "65%", zIndex: 30}} settings = {{
+                            <Tilty className={`fadeIn`} style={{width: "65%", zIndex: 30}} settings={{
                                 scale: 1.13,
                             }}>
                                 <img src={this.state.imgOne}/>
@@ -81,7 +79,7 @@ class CaseStudy extends Component {
                         </Box>
                     </Box>
                     <Box id={Styles.right} className={`fadeIn`}>
-                        <Navigation />
+                        <Navigation/>
                         <Box id={Styles.descWrapper}>
                             <HorizontalLineTop/>
                             <h1 id={Styles.caseStudyTitle}>
@@ -98,9 +96,10 @@ class CaseStudy extends Component {
         );
     }
 }
+
 export default CaseStudy;
 
-function FadeIn(props){
+function FadeIn(props) {
     return (
         <>
             {props.children}

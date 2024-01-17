@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
-import { 
-    Box ,
-    TextField,
-    Button
-} from '@material-ui/core';
+import {Box, Button, TextField} from '@material-ui/core';
 import Styles from './Contact.module.css';
 import {
-    HorizontalLineTop,
     HorizontalLineBottom,
+    HorizontalLineTop,
     VerticalLineLeft,
     VerticalLineRight
 } from "../../common/AnimatedLines/AnimatedLines.component";
@@ -17,12 +13,12 @@ import Navigation from "../../common/Navigation/Navigation.component";
 class Contact extends Component {
 
     //constructor(props) {
-        //super(props);
-        //this.state = {
-            
-        //}
+    //super(props);
+    //this.state = {
+
     //}
-    
+    //}
+
     render() {
         return (
             <>
@@ -61,7 +57,7 @@ class Contact extends Component {
                         > Send </Button>
                     </form>
                     {/*<Box width={"62.5%"}>*/}
-                        <Navigation/>
+                    <Navigation/>
                     {/*</Box>*/}
 
                 </Box>
@@ -69,4 +65,5 @@ class Contact extends Component {
         );
     }
 }
+
 export default Contact;

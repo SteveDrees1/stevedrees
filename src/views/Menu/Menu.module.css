@@ -1,6 +1,6 @@
 /* Menu CSS Template */
 
-#menuWrapper{
+#menuWrapper {
     width: 70%;
     height: 65vh;
     border: solid 5px #9B9B9B;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.commonBox{
+.commonBox {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -17,22 +17,22 @@
     align-items: center;
 }
 
-#topBox{
+#topBox {
     flex-basis: 25%;
     flex-direction: row;
 }
 
-#middleBox{
+#middleBox {
     flex-basis: 50%;
     border-top: solid 5px #9b9b9b;
     border-bottom: solid 5px #9b9b9b;
 }
 
-#bottomBox{
+#bottomBox {
     flex-basis: 25%;
 }
 
-.menuLinkWrapper{
+.menuLinkWrapper {
     box-sizing: border-box;
     padding: 3% 9% 3% 9%;
     text-align: center;
@@ -43,7 +43,7 @@
     cursor: pointer;
 }
 
-.menuLinkLabel{
+.menuLinkLabel {
     margin: 0;
     font-weight: 500;
     font-family: 'Lato', sans-serif;
@@ -51,7 +51,7 @@
     text-transform: uppercase;
 }
 
-.topInnerMenuLinks{
+.topInnerMenuLinks {
     height: 100%;
     width: 50%;
     display: flex;
@@ -60,22 +60,23 @@
     justify-content: center;
 }
 
-#middleLiner{
+#middleLiner {
     border-left: solid 5px #9b9b9b;
 }
 
-.menuLinkWrapper:hover:after, .menuLinkWrapper:hover:before{
-    mix-blend-mode:multiply;
-    filter:none;
+.menuLinkWrapper:hover:after, .menuLinkWrapper:hover:before {
+    mix-blend-mode: multiply;
+    filter: none;
     z-index: -1;
-    content:'';
-    width:calc(90% + (20% * 2));
-    height:calc(90% + (20% * 2));
+    content: '';
+    width: calc(90% + (20% * 2));
+    height: calc(90% + (20% * 2));
     position: absolute;
     display: block;
     animation: border 7s ease-in-out infinite;
-    transform:translateX(-50px) translateY(-50px);
+    transform: translateX(-50px) translateY(-50px);
 }
+
 @keyframes border {
     0%, 100% {
         -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
@@ -87,11 +88,12 @@
     }
 }
 
-.menuLinkWrapper:hover:after{
+.menuLinkWrapper:hover:after {
     animation-delay: -5s;
     background-color: #5f86f2;
     clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
 }
+
 .menuLinkWrapper:hover:before {
     background-color: #5ff2f0;
     clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);

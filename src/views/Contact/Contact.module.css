@@ -1,6 +1,6 @@
 /* Contact CSS Template */
 
-#contactWrapper{
+#contactWrapper {
     flex-basis: 60%;
     height: 70vh;
     position: relative;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-#contactFormTitle{
+#contactFormTitle {
     min-width: 38%;
     min-height: 50px;
     font-family: 'Lato', sans-serif;
@@ -24,18 +24,18 @@
     margin: 30px 0 40px 0;
 }
 
-#contactForm{
+#contactForm {
     width: 60%;
     height: 65%;
     position: relative;
 }
 
-.inputSpacer{
+.inputSpacer {
     margin: 15px 0 !important;
     background: white;
 }
 
-#sendButton{
+#sendButton {
     position: absolute;
     bottom: 0;
     right: 0;
