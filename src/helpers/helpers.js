@@ -268,7 +268,9 @@ export function calculateAge(dob) { // dob in YYYY-MM-DD format
 export function toTitleCase(str) {
     return str.replace(
         /\w\S*/g,
-        (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+        (txt) => {
+            return txt.charAt(0).toUpperCase() + txt.toLowerCase();
+        }
     );
 }
 

@@ -1,32 +1,31 @@
-import React, {Component} from 'react';
 import Styles from './main.module.css';
-
-import {BrowserRouter as Router, Route, Switch,} from "react-router-dom";
-import Menu from "../Menu/Menu.component";
+import React, {Component} from "react";
+import {useRoutes, useNavigate } from "react-router-dom";
 import MyWork from "../MyWork/MyWork.component";
 import CaseStudy from "../CaseStudy/CaseStudy.component";
 import Contact from "../Contact/Contact.component";
+import About from "../About/About.component";
+import Menu from "../Menu/Menu.component";
+
+const AppRoutes = () => {
+    const routes = useRoutes([
+        {path: "/", element: <MeName/>},
+        {path: "/menu", element: <Menu/>},
+        {path: "/my-work", element: <MyWork/>},
+        {path: "/case-study/:caseID", element: <CaseStudy/>},
+        {path: "/about", element: <About/>},
+        {path: "/contact", element: <Contact/>},
+    ]);
+    return routes;
+};
 
 class App extends Component {
-    //constructor(props) {
-    //super(props);
-    //this.state = {}
-    //}
 
     render() {
         return (
             <>
                 <Marco>
-                    <Router>
-                        <Switch>
-                            <Route exact={true} path="/" component={MeName}/>
-                            <Route exact={true} path="/menu" component={Menu}/>
-                            <Route exact={true} path="/my-work" component={MyWork}/>
-                            <Route exact={true} path="/case-study/:caseID" component={CaseStudy}/>
-                            <Route exact={true} path="/about" component={CaseStudy}/>
-                            <Route exact={true} path="/contact" component={Contact}/>
-                        </Switch>
-                    </Router>
+                    <AppRoutes/>;
                 </Marco>
             </>
         );
@@ -75,6 +74,7 @@ function MeName(props) {
 }
 
 function FakeLoader({history}) {
+    const navigate = useNavigate();
     const [count, setCount] = React.useState(0)
     let i;
     const requestRef = React.useRef();
@@ -98,7 +98,7 @@ function FakeLoader({history}) {
 
     if (i >= 100) {
         cancelAnimationFrame(requestRef.current);
-        history.push("/my-work");
+        navigate("/my-work");
     }
 
     return i

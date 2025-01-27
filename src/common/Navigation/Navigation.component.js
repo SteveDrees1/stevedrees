@@ -1,28 +1,6 @@
 import React from 'react';
-//import {Route, Link, Redirect} from "react-router-dom";
-import {Box, Link} from '@material-ui/core';
+import {Box, Link} from '@mui/material';
 import Styles from './Navigation.module.css';
-// import Styles from "../../views/MyWork/MyWork.module.css";
-
-// class Navigation extends Component {
-//
-//     //constructor(props) {
-//         //super(props);
-//         //this.state = {
-//
-//         //}
-//     //}
-//
-//     render() {
-//         return (
-//             <>
-//                 <Box>
-//                     {5+5}
-//                 </Box>
-//             </>
-//         );
-//     }
-// }
 
 function Navigation(){
     return(

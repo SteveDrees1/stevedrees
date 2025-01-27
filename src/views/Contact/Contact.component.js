@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-//import {Route, Link, Redirect} from "react-router-dom";
-import {Box, Button, TextField} from '@material-ui/core';
+import {Box, Button, TextField} from '@mui/material';
 import Styles from './Contact.module.css';
 import {
     HorizontalLineBottom,
@@ -11,13 +10,6 @@ import {
 import Navigation from "../../common/Navigation/Navigation.component";
 
 class Contact extends Component {
-
-    //constructor(props) {
-    //super(props);
-    //this.state = {
-
-    //}
-    //}
 
     render() {
         return (

@@ -1,22 +1,15 @@
-import React, {Component} from 'react';
-//import {Route, Link, Redirect} from "react-router-dom";
-import {Box} from '@material-ui/core';
-import Styles from './MyWork.module.css';
-import {HorizontalLineTop, VerticalLineLeft} from "../../common/AnimatedLines/AnimatedLines.component";
+import React, { Component } from "react";
+import { Box } from "@mui/material";
+import Styles from "./MyWork.module.css";
+import { HorizontalLineTop, VerticalLineLeft } from "../../common/AnimatedLines/AnimatedLines.component";
 import Tilty from "react-tilty";
 import Navigation from "../../common/Navigation/Navigation.component";
+import { withNavigation } from "../../common/withNavigation"; // Import the HOC
 
 class MyWork extends Component {
-
-    //constructor(props) {
-        //super(props);
-        //this.state = {
-
-        //}
-    //}
-
-    handleCaseStudyClick(to){
-        this.props.history.push(`/case-study/${to}`)
+    handleCaseStudyClick(to) {
+        const { navigate } = this.props; // Access navigate from props
+        navigate(`/case-study/${to}`);
     }
 
     render() {
@@ -24,62 +17,87 @@ class MyWork extends Component {
             <>
                 <Box id={Styles.templateWrapper}>
                     <Box id={Styles.left} className={Styles.innerBox}>
-                        <VerticalLineLeft/>
+                        <VerticalLineLeft />
                         <Box className={Styles.middleInnerBox}>
                             <Box className={Styles.horizontalMobile}>
-                                <HorizontalLineTop/>
+                                <HorizontalLineTop />
                             </Box>
-                            <Tilty className={"fadeIn"} id={Styles.fundersTextWrapper} settings = {{
-                                scale: 1.1,
-                            }}>
+                            <Tilty
+                                className={"fadeIn"}
+                                id={Styles.fundersTextWrapper}
+                                settings={{
+                                    scale: 1.1,
+                                }}
+                            >
                                 <WorkTemp
                                     img={"/img/ProjectUnknownLogo.png"}
                                     logo={"/img/ProjectUnknownTextLogo.png"}
-                                    logoStyle={{marginTop: "0", transform: "translateZ(100px)"}}
-                                    clicked={()=>{this.handleCaseStudyClick("ProjectUnknown")}}
+                                    logoStyle={{ marginTop: "0", transform: "translateZ(100px)" }}
+                                    clicked={() => {
+                                        this.handleCaseStudyClick("ProjectUnknown");
+                                    }}
                                 />
                             </Tilty>
                         </Box>
                         <Box className={Styles.middleInnerBox}>
-                            <HorizontalLineTop/>
-                            <Tilty className={"fadeIn"} id={Styles.fundersTextWrapper} settings = {{
-                                scale: 1.1,
-                            }}>
+                            <HorizontalLineTop />
+                            <Tilty
+                                className={"fadeIn"}
+                                id={Styles.fundersTextWrapper}
+                                settings={{
+                                    scale: 1.1,
+                                }}
+                            >
                                 <WorkTemp
                                     img={"/img/Buildings.png"}
                                     logo={"/img/FundersTextLogo.png"}
-                                    logoStyle={{marginTop: "-95px", transform: "translateZ(100px)"}}
-                                    clicked={()=>{this.handleCaseStudyClick("FundersLink")}}
+                                    logoStyle={{ marginTop: "-95px", transform: "translateZ(100px)" }}
+                                    clicked={() => {
+                                        this.handleCaseStudyClick("FundersLink");
+                                    }}
                                 />
                             </Tilty>
                         </Box>
                     </Box>
                     <Box id={Styles.middle} className={Styles.innerBox}>
-                        <VerticalLineLeft/>
+                        <VerticalLineLeft />
                         <Box className={Styles.horizontalMobile}>
-                            <HorizontalLineTop/>
+                            <HorizontalLineTop />
                         </Box>
-                        <Box className={Styles.middleInnerBox} >
-                            <Tilty className={"fadeIn"} id={Styles.devMindWrapper} settings = {{
-                                scale: 1.1,
-                            }}>
+                        <Box className={Styles.middleInnerBox}>
+                            <Tilty
+                                className={"fadeIn"}
+                                id={Styles.devMindWrapper}
+                                settings={{
+                                    scale: 1.1,
+                                }}
+                            >
                                 <WorkTemp
                                     img={"/img/DevMindLogo.png"}
                                     logo={"/img/DevMindTextLogo.png"}
-                                    logoStyle={{marginTop: "0px"}}
-                                    clicked={()=>{this.handleCaseStudyClick("DevMind")}}
+                                    logoStyle={{ marginTop: "0px" }}
+                                    clicked={() => {
+                                        this.handleCaseStudyClick("DevMind");
+                                    }}
                                 />
                             </Tilty>
                         </Box>
                         <Box className={Styles.middleInnerBox}>
-                            <HorizontalLineTop/>
-                            <Tilty style={{width: "84%", zIndex: 30}} className={"fadeIn"}  settings = {{
-                                scale: 1.08,
-                            }}>
-                                <img className={`fadeIn`}
-                                     src={"/img/AetherLogoAndTextLogo.png"}
-                                     alt={"Aether Description"}
-                                     onClick={()=>{this.handleCaseStudyClick("Aether")}}
+                            <HorizontalLineTop />
+                            <Tilty
+                                style={{ width: "84%", zIndex: 30 }}
+                                className={"fadeIn"}
+                                settings={{
+                                    scale: 1.08,
+                                }}
+                            >
+                                <img
+                                    className={`fadeIn`}
+                                    src={"/img/AetherLogoAndTextLogo.png"}
+                                    alt={"Aether Description"}
+                                    onClick={() => {
+                                        this.handleCaseStudyClick("Aether");
+                                    }}
                                 />
                             </Tilty>
                         </Box>
@@ -89,15 +107,21 @@ class MyWork extends Component {
                             <Navigation />
                         </Box>
                         <Box id={Styles.rightWorkCont}>
-                            <HorizontalLineTop/>
-                            <Tilty className={"fadeIn"} id={Styles.Studio953Wrapper} settings = {{
-                                scale: 1.1,
-                            }}>
+                            <HorizontalLineTop />
+                            <Tilty
+                                className={"fadeIn"}
+                                id={Styles.Studio953Wrapper}
+                                settings={{
+                                    scale: 1.1,
+                                }}
+                            >
                                 <WorkTemp
                                     img={"/img/Studio953Logo.png"}
                                     logo={"/img/Studio953TextLogo.png"}
-                                    logoStyle={{marginTop: "0px"}}
-                                    clicked={()=>{this.handleCaseStudyClick("Studio953")}}
+                                    logoStyle={{ marginTop: "0px" }}
+                                    clicked={() => {
+                                        this.handleCaseStudyClick("Studio953");
+                                    }}
                                 />
                             </Tilty>
                         </Box>
@@ -107,14 +131,15 @@ class MyWork extends Component {
         );
     }
 }
-export default MyWork;
 
+// Wrap MyWork with the withNavigation HOC
+export default withNavigation(MyWork);
 
-function WorkTemp({img, logo, logoStyle, clicked}){
-    return(
-        <Box className={Styles.workTemp} onClick={(e)=>{clicked(e)}}>
-            <img src={img} alt={"FundersLink Description"}/>
-            <img src={logo} style={logoStyle} alt={"FundersLink Description"}/>
+function WorkTemp({ img, logo, logoStyle, clicked }) {
+    return (
+        <Box className={Styles.workTemp} onClick={(e) => clicked(e)}>
+            <img src={img} alt={"FundersLink Description"} />
+            <img src={logo} style={logoStyle} alt={"FundersLink Description"} />
         </Box>
-    )
+    );
 }
