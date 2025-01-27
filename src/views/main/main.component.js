@@ -80,19 +80,21 @@ function FakeLoader({history}) {
     const requestRef = React.useRef();
     const previousTimeRef = React.useRef();
 
-    const animate = time => {
+    // Stabilize `animate` using React.useCallback
+    const animate = React.useCallback((time) => {
         if (previousTimeRef.current !== undefined) {
             const deltaTime = time - previousTimeRef.current;
-            setCount(prevCount => (prevCount + deltaTime * 0.01) % 100);
+            setCount((prevCount) => (prevCount + deltaTime * 0.01) % 100);
         }
         previousTimeRef.current = time;
         requestRef.current = window.requestAnimationFrame(animate);
-    }
+    }, []); // Empty dependency array ensures `animate` is stable
 
+    // Set up the animation effect
     React.useEffect(() => {
         requestRef.current = window.requestAnimationFrame(animate);
         return () => cancelAnimationFrame(requestRef.current);
-    }, [animate]); // Make sure the effect runs only once
+    }, [animate]); // `animate` is now stable and safely included as a dependency
 
     i = `${Math.round(count)}`
 
