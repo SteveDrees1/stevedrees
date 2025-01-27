@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Helpers from './helpers/helpers'
 
 const APIConfig = {
     wss: "",

@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
-import {
-    Box, Link
-} from '@material-ui/core';
+import {Box, Link} from '@material-ui/core';
 import Styles from './Navigation.module.css';
 // import Styles from "../../views/MyWork/MyWork.module.css";
 
