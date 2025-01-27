@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 //import {Route, Link, Redirect} from "react-router-dom";
-import {
-    Box, Link
-} from '@material-ui/core';
+import {Box} from '@material-ui/core';
 import Styles from './MyWork.module.css';
-import {VerticalLineLeft, HorizontalLineTop} from "../../common/AnimatedLines/AnimatedLines.component";
+import {HorizontalLineTop, VerticalLineLeft} from "../../common/AnimatedLines/AnimatedLines.component";
 import Tilty from "react-tilty";
 import Navigation from "../../common/Navigation/Navigation.component";
 
