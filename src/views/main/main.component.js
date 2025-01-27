@@ -92,7 +92,7 @@ function FakeLoader({history}) {
     React.useEffect(() => {
         requestRef.current = window.requestAnimationFrame(animate);
         return () => cancelAnimationFrame(requestRef.current);
-    }, []); // Make sure the effect runs only once
+    }, [animate]); // Make sure the effect runs only once
 
     i = `${Math.round(count)}`
 
