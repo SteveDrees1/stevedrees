@@ -17,7 +17,7 @@ function Navigation(){
                 {/*<Link className={Styles.link} href="/contact" color="inherit">*/}
                 {/*    Hire Me |*/}
                 {/*</Link>*/}
-                <Link className={Styles.link} href="/William_Drees_Resume.pdf" color="inherit">
+                <Link className={Styles.link} href="/assets/William_Drees_Resume.pdf" color="inherit">
                     Resume |
                 </Link>
                 <Link className={Styles.link} href="/contact" color="inherit">
